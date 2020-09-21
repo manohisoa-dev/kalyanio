@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-# Dago share
+# Kaly Anio
 
-Dago Share est un site qui permet de partager des fichiers, documents, tutoriels entre des particuliers pour les particuliers
+encyclopédie cullunaire
 
 ## Commencer
 
