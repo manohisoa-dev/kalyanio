@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dago share
 
 Dago Share est un site qui permet de partager des fichiers, documents, tutoriels entre des particuliers pour les particuliers
@@ -62,3 +63,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE.md] (LICENSE.md) pour 
 * Je remercie profondément les personnes qui ont contribuées à la réalisation de ce projet
 * Merci aux team Agnaro Webcompany aussi ;)
 
+=======
+# kalyanio
+encyclopédie cullunaire 
+>>>>>>> refs/remotes/origin/master
