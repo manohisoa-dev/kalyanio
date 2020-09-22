@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h3>Bienvenue à Kaly Anio</h3>
+    <h3>Bienvenue à {{ config('app.name', 'Laravel') }}</h3>
     <p>
         Encyclopédie culinaire 
     </p>
