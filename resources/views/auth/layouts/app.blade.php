@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kalintsika | Login</title>
+    <title>{{ config('app.name', 'Laravel') }} | Login</title>
 
     <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
@@ -21,7 +21,7 @@
 <div class="middle-box text-center loginscreen  animated fadeInDown">
     <div>
         <div>
-            <h1 class="logo-name">KLT</h1>
+            <h1 class="logo-name">{{ strtoupper(str_limit(config('app.name', 'Laravel'),2, '')) }}</h1>
         </div>
         @yield('content')
         <p class="m-t"> <small>&copy; Agnaro Webcompany 2019 {{\Carbon\Carbon::now()->year != "2019" ? "- " . \Carbon\Carbon::now()->year : ""}}</small> </p>

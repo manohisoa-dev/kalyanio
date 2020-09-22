@@ -110,7 +110,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <span class="m-r-sm text-muted welcome-message">Bienvenue dans l'encyclopedie des nourritures : <i>Kalintsika</i>.</span>
+                        <span class="m-r-sm text-muted welcome-message">Bienvenue dans l'encyclopedie des nourritures : <i>{{ config('app.name', 'Laravel') }}</i>.</span>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">

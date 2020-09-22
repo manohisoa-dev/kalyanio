@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <h3>Bienvenue à Kalintsika</h3>
-    <p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-        <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
+    <h3>Bienvenue à Kaly Anio</h3>
+    <p>
+        Encyclopédie culinaire 
     </p>
     <p>Connectez-vous. Pour le voir en action.</p>
     <form class="m-t form-validation" role="form" method="POST" action="{{ route('login') }}">

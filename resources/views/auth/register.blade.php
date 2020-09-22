@@ -1,7 +1,7 @@
 @extends('auth.layouts.app')
 
 @section('content')
-    <h3>S'inscrire dans DS</h3>
+    <h3>S'inscrire dans Kaly Anio</h3>
     <p>Create account to see it in action.</p>
     <form class="m-t form-validation" role="form" method="POST" action="{{ route('register') }}">
         @csrf
