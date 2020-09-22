@@ -52,7 +52,7 @@ Ensuite, copiez le lien qui se trouve dans la ligne de commande et coller les da
 
 * **Mano Rakotondrasata** - [manohisoa-dev](https://github.com/manohisoa-dev/)
 
-Voir aussi la liste des [contributeurs](https://github.com/manohisoa-dev/dagoshare/graphs/contributors) qui a participé à ce projet.
+Voir aussi la liste des [contributeurs](https://github.com/manohisoa-dev/kalyanio/graphs/contributors) qui a participé à ce projet.
 
 ## Licence
 
