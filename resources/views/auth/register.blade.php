@@ -2,7 +2,7 @@
 
 @section('content')
     <h3>S'inscrire dans {{ config('app.name', 'Laravel') }}</h3>
-    <p>Create account to see it in action.</p>
+    <p>Créez un compte pour le voir en action.</p>
     <form class="m-t form-validation" role="form" method="POST" action="{{ route('register') }}">
         @csrf
         <div class="form-group">
