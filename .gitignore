@@ -116,6 +116,8 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+.gitattributes
+.svn/
 
 # Laravel IDE helper
 *.meta.*

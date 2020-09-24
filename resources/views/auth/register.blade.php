@@ -41,7 +41,7 @@
             <input id="password-confirm" type="password" class="form-control" placeholder="Confirmation du mot de passe" name="password_confirmation" required>
         </div>
         <div class="form-group">
-            <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
+            <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Acceptez les conditions et la politique de confidentialité.</label></div>
         </div>
         <button type="submit" class="btn btn-primary block full-width m-b">S'inscrire</button>
 
