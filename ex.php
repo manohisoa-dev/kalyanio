@@ -4,10 +4,11 @@
 $sql = "SELECT * FROM nourritures ORDER BY cout DESC";
 $result = mysqli_query($conn, $sql);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Kaly Anio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -18,7 +19,7 @@ $result = mysqli_query($conn, $sql);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:10%; width:100%">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:15%">
   <a class="navbar-brand" style="font-size: 2em;font-weight:800; color: black" href="#">Kaly anio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -60,12 +61,13 @@ $result = mysqli_query($conn, $sql);
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0" style="padding-left:10%; width: auto; margin:auto">
+    <form class="form-inline my-2 my-sm-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
+
 <div id="demo" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -156,8 +158,8 @@ $result = mysqli_query($conn, $sql);
                 <a href="about.php" class="btn btn-success">En savoir plus</a>
             </div>
         </div>
-
-        <div class="row">
+      
+        <div class="py-4">
             
             <div class="col-lg-6 col-md-6 col-12">
                 <h2 class="display-5" style="color:#1d3752">Simulateur de budget</h2>
@@ -165,25 +167,31 @@ $result = mysqli_query($conn, $sql);
                 <a href="about.php" class="btn btn-success">En savoir plus</a>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
-                <div class="display-5">
-	                <input type="range" min="0" max="20000" value="0" step="1000" id="range_value"> 
-                    <center>Prix en Ariary : <span id="price_display">--</span></center>
-                    <div class="containers">
+              <input type="range" min="0" max="1000" value="0" step="100" id="range_value"> 
+              <center>Prix en Ariary:<span id="price_display">--</span></center>
+                <div class="containers">
                   <div class="row">
                   <?php
                     while($row = mysqli_fetch_assoc($result)) {
-                     
-                    }?>
-                
+                  ?>
+                <div class="col-sm-3" style="border: 1px solid skyblue">
+                    <p class="menu"style="background-color:skyblue; text-align:center; height:70px; margin:auto; padding-top:10px"><?php echo $row["libelle"] ?></p>
+                    <p style="font-size: 0.8em; font-weigth: 200">Préparation : <?php echo $row["preparation_duree"] ?> </p>
+                    <p style="font-size: 0.8em; font-weigth: 200">Cuisson: <?php echo $row["cuisson"] ?> </p>
+                    <p style="font-size: 0.9em; font-weigth: 200">Prix : <?php echo $row["cout"] ?> Ariary</p>
+                    <a href="about.php" class="btn btn-success" style="width:100%; height:30px; margin-bottom:10px">Voir la recette</a>
+                </div>
+                <?php
+                  } 
+                ?>
               </div>   <!--row ends-->
             </div>   <!--containers ends-->
-            </div>
+          </div>     <!--container ends-->
           </div>
-        </div>
     </div>
-    
+
 </section>
-<script>
+              <script>
               $(document).ready(function(){     
 
                 $("#range_value").change(function()
@@ -204,33 +212,25 @@ $result = mysqli_query($conn, $sql);
               });
             })
         </script>
+    
+ 
 <section class="my-3">
     <div class="py-4">
         <h2 class="text-center" style="color:slategrey; font-weight:800; font-size: 3em">Planifier, organiser... </h2>
     </div>
-    <div class="row">
-            <div class="col-lg-6 col-md-6 col-12">
-                <img src="images/eat.jpg" class="img-fluid abouting">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
             </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <h2 class="display-5" style="color:#1d3752">Espace membre</h2>
-                  <p class="py-3" style="text-align:justify">Veuillez vous connecter ou créer un compte pour bénéficier de tous les avantages du site.</p>
-                  <a href="#" style="font-size: 1em">Se connecter</a>
-                  <a href="#" style ="background-color: red; color: white" href="#">Créer un compte</a>
-                
-                
-                  <h2 class="display-5" style="color:#1d3752">Espace visiteurs</h2>
-                  <p class="py-3" style="text-align:justify">A quoi ça sert ?.</p>
-                  <a href="about.php" class="btn btn-success">Voir une vidéo de présentation</a>
-            </div>
-      </div>
-
+        </div>
+    </div>
 </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 <?php
 
 mysqli_close($conn);
