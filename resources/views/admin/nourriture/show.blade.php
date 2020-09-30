@@ -65,6 +65,16 @@
                         <h4>Préparation</h4>
                         <p>{!! $nourriture->preparation !!}</p>
                     </li>
+                    <li class="list-group-item">
+                        <h4>Photos</h4>
+                        <p>
+                            @if(!isset($nourriture->media))
+                                <img class="img-fluid" src="http://placehold.it/100x100" alt="{{$nourriture->libelle}}">
+                            @else
+                                <img class="img-fluid" src="{{$nourriture->getImageUrl('medium')}}" alt="{{$nourriture->libelle}}">
+                            @endif
+                        </p>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -6,7 +6,7 @@
 @extends('<?=config('crud.layout')?>')
 
 @section('page-heading')
-<div class="col-sm-4">
+<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
     <h2><?= $gen->titlePlural() ?></h2>
     <ol class="breadcrumb">
         <li>
@@ -17,9 +17,9 @@
         </li>
     </ol>
 </div>
-<div class="col-sm-8">
+<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
     <div class="title-action">
-        <a href="{{ route('<?= $gen->generateRouteAction('create') ?>') }}" type="button" class="btn btn-primary">
+        <a href="{{ route('<?= $gen->generateRouteAction('create') ?>') }}" type="button" class="btn btn-primary btn-block">
             <i class="fa fa-plus"></i> Ajouter un nouveau <?=$gen->titleSingular()?>
         </a>
     </div>

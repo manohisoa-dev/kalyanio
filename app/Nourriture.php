@@ -133,5 +133,9 @@ class Nourriture extends Model {
     {
         return $this->hasMany('App\Planning');
     }
+
+    public function getImageUrl($imageSizeName = "medium"){
+        return $this->getAvatar($imageSizeName);
+    }
 }
 

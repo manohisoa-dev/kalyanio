@@ -8,7 +8,7 @@
 @endsection
 
 @section('page-heading')
-<div class="col-sm-4">
+<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
     <h2>Plannings</h2>
     <ol class="breadcrumb">
         <li>
@@ -19,9 +19,9 @@
         </li>
     </ol>
 </div>
-<div class="col-sm-8">
+<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
     <div class="title-action">
-        <a href="{{ route('admin.planning.create') }}" type="button" class="btn btn-primary">
+        <a href="{{ route('admin.planning.create') }}" type="button" class="btn btn-primary btn-block">
             <i class="fa fa-plus"></i> Ajouter un nouveau Planning        </a>
     </div>
 </div>
@@ -32,39 +32,41 @@
 	<div class="col-lg-12">
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
-                <table class="table table-striped grid-view-tbl">
-                <thead>
-                    <tr class="header-row">
-                        {!!\Nvd\Crud\Html::sortableTh('id','admin.planning.index','Id')!!}
-                        {!!\Nvd\Crud\Html::sortableTh('nourriture_id','admin.planning.index','Nourriture')!!}
-                        {!!\Nvd\Crud\Html::sortableTh('date','admin.planning.index','Date')!!}
-                        {!!\Nvd\Crud\Html::sortableTh('plannifier_pour','admin.planning.index','Plannifier Pour')!!}
-                        {!!\Nvd\Crud\Html::sortableTh('created_at','admin.planning.index','Créer le')!!}
-                        <th></th>
-                    </tr>
-                    <tr class="search-row">
-                        <form class="search-form">
-                            <td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
-                            <td>
-                                <select class="form-control chosen-select" id="nourriture_id" name="nourriture_id">
-                                    <option value="">Toutes</option>
-                                    @foreach(\App\Nourriture::orderBy('libelle')->get() as $item)
-                                        <option value="{{$item->id}}" {{Request::input("nourriture_id") == $item->id ? 'selected' : '' }}>{{$item->libelle}}</option>
-                                    @endforeach
-                                </select>
-                            </td>
-                            <td><input type="date" class="form-control" name="date" value="{{Request::input("date")}}"></td>
-                            <td>{!!\Nvd\Crud\Html::selectRequested(
-                                    'plannifier_pour',
-                                    [ '', 'matin', 'midi', 'soir' ],
-                                    ['class'=>'form-control']
-                                )!!}</td>
-                            <td><input type="text" class="form-control" name="created_at" value="{{Request::input("created_at")}}"></td>
-                            <td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
-                        </form>
-                    </tr>
-                    </thead>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped grid-view-tbl">
+                    <thead>
+                        <tr class="header-row">
+                            {!!\Nvd\Crud\Html::sortableTh('id','admin.planning.index','Id')!!}
+                            {!!\Nvd\Crud\Html::sortableTh('nourriture_id','admin.planning.index','Nourriture')!!}
+                            {!!\Nvd\Crud\Html::sortableTh('date','admin.planning.index','Date')!!}
+                            {!!\Nvd\Crud\Html::sortableTh('plannifier_pour','admin.planning.index','Plannifier Pour')!!}
+                            {!!\Nvd\Crud\Html::sortableTh('created_at','admin.planning.index','Créer le')!!}
+                            <th></th>
+                        </tr>
+                        <tr class="search-row">
+                            <form class="search-form">
+                                <td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
+                                <td>
+                                    <select class="form-control chosen-select" id="nourriture_id" name="nourriture_id">
+                                        <option value="">Toutes</option>
+                                        @foreach(\App\Nourriture::orderBy('libelle')->get() as $item)
+                                            <option value="{{$item->id}}" {{Request::input("nourriture_id") == $item->id ? 'selected' : '' }}>{{$item->libelle}}</option>
+                                        @endforeach
+                                    </select>
+                                </td>
+                                <td><input type="date" class="form-control" name="date" value="{{Request::input("date")}}"></td>
+                                <td>{!!\Nvd\Crud\Html::selectRequested(
+                                        'plannifier_pour',
+                                        [ '', 'matin', 'midi', 'soir' ],
+                                        ['class'=>'form-control']
+                                    )!!}</td>
+                                <td><input type="text" class="form-control" name="created_at" value="{{Request::input("created_at")}}"></td>
+                                <td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
+                            </form>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
 
                 @include('vendor.crud.single-page-templates.common.pagination', [ 'records' => $records ] )
 

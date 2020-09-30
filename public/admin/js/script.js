@@ -4,7 +4,7 @@ $(document).ready(function () {
     }
 
     if($('.chosen-select').length){
-        $(".chosen-select").chosen();
+        $(".chosen-select").chosen({ width: '100%' });
     }
 
     if($('.clockpicker').length){
