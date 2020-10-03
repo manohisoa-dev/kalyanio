@@ -41,7 +41,7 @@ class NourritureController extends Controller
     {
         $this->validate($request, Nourriture::validationRules());
 
-        $nourriture = Nourriture::create($request->all());
+        $nourriture = Nourriture::create($request->except('image'));
 
         #ajout photo pour l'evenement
         if ($request->file('image')) {

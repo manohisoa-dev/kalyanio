@@ -2,6 +2,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 
 class Planning extends Model {
@@ -20,7 +21,10 @@ class Planning extends Model {
         \Request::input('plannifier_pour') and $query->where('plannifier_pour',\Request::input('plannifier_pour'));
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
         \Request::input('updated_at') and $query->where('updated_at',\Request::input('updated_at'));
-        
+
+        // restriction des plannings affichés uniquement pour l'utilisateur l'à ajouter
+        $query->where('user_id', Auth::id());
+
         // sort results
         \Request::input("sort") and $query->orderBy(\Request::input("sort"),\Request::input("sortType","asc"));
 

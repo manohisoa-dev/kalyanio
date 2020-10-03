@@ -1,0 +1,104 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = " ";
+$dbname = " ";
+
+ $conn = mysqli_connect($servername, $username, $password, $dbname);
+ 
+
+$sql = "SELECT * FROM products ORDER BY product_price DESC";
+$result = mysqli_query($conn, $sql);
+
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>online store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Online Store</h1> 
+</div>    <!--jumbotron ends-->
+  
+
+
+<div class="container">
+	<input type="range" min="0" max="1000" value="0" step="100" id="range_value"> 
+	<center>Price below RS:<span id="price_display">--</span></center>
+
+
+<div class="containers">
+
+  <div class="row">
+
+<?php
+      while($row = mysqli_fetch_assoc($result)) {
+?>
+
+ 
+    <div class="col-sm-3">
+    <p>Product Name: <?php echo $row["libelle"] ?></p>
+    <p>Price : <?php echo $row["cout"] ?> RS</p>
+    </div>
+
+<?php
+    } 
+?>
+
+
+
+
+  </div>   <!--row ends-->
+    </div>   <!--containers ends-->
+</div>     <!--container ends-->
+
+
+
+<script>
+$(document).ready(function(){
+
+	$("#range_value").change(function(){
+		var range = $("#range_value").val();
+   $("#price_display").html(range);
+
+$.ajax({
+  url:"fetch.php",
+  method:"POST",
+  data:{priced:range},
+  success:function(data){
+    $(".containers").html(data);
+  }
+});
+
+
+	});
+
+
+
+
+   
+
+
+})
+
+</script>
+</body>
+</html>
+
+
+<?php
+
+mysqli_close($conn);
+
+?>

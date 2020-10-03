@@ -85,7 +85,7 @@
                         </ul>
                     </div>
                     <div class="logo-element">
-                        KLT
+                        {{ strtoupper(str_limit(config('app.name', 'Laravel'),2, '')) }}
                     </div>
                 </li>
                 {{-- menu list --}}
@@ -240,7 +240,7 @@
         <div class="footer">
             <div class="row">
                 <div class="col-lg-5">
-                    <strong>Copyright</strong> Agnaro Webcompany &copy; 2019 {{\Carbon\Carbon::now()->year != "2019" ? "- " . \Carbon\Carbon::now()->year : ""}}
+                    <strong>Copyright</strong> <a href="http://agnaro.com/" target="_blank" class="text-decoration-none">Agnaro Webcompany</a> &copy; 2019 {{\Carbon\Carbon::now()->year != "2019" ? "- " . \Carbon\Carbon::now()->year : ""}}
                 </div>
 
                 <div class="pull-right">

@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('page-heading')
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-sm-12">
         <h2>Tableau de bord</h2>
         <ol class="breadcrumb">
             <li>
@@ -12,9 +12,9 @@
             </li>
         </ol>
     </div>
-    <div class="col-sm-8">
+    <div class="col-lg-8 col-sm-12">
         <div class="title-action">
-            <a href="#" type="button" class="btn btn-primary">
+            <a href="#" type="button" class="btn btn-primary btn-block">
                 <i class="fa fa-plus"></i> &nbsp; Ajouter une nourriture
             </a>
         </div>

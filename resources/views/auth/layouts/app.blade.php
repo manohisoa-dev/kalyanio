@@ -24,7 +24,7 @@
             <h1 class="logo-name">{{ strtoupper(str_limit(config('app.name', 'Laravel'),2, '')) }}</h1>
         </div>
         @yield('content')
-        <p class="m-t"> <small>&copy; Agnaro Webcompany 2019 {{\Carbon\Carbon::now()->year != "2019" ? "- " . \Carbon\Carbon::now()->year : ""}}</small> </p>
+        <p class="m-t"> <small>&copy; <a href="http://agnaro.com/" target="_blank" class="text-decoration-none">Agnaro Webcompany</a> 2019 {{\Carbon\Carbon::now()->year != "2019" ? "- " . \Carbon\Carbon::now()->year : ""}}</small> </p>
     </div>
 </div>
 

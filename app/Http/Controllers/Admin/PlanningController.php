@@ -3,10 +3,12 @@ namespace App\Http\Controllers\admin;
 
 use App\Nourriture;
 use App\Planning;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Jleon\LaravelPnotify\Notify;
 
 class PlanningController extends Controller
@@ -50,7 +52,9 @@ class PlanningController extends Controller
     {
         $this->validate($request, Planning::validationRules());
 
-        $planning = Planning::create($request->except('heure'));
+        $data = $request->except('heure') ;
+        $data['user_id'] = Auth::id() ;
+        $planning = Planning::create($data);
 
         $nourriture = Nourriture::find($request->input('nourriture_id')) ;
         $nourriture->cout = $nourriture->cout($format = false) ;
@@ -106,7 +110,9 @@ class PlanningController extends Controller
 
         $this->validate($request, Planning::validationRules());
 
-        $planning->update($request->except('heure'));
+        $data = $request->except('heure') ;
+        $data['user_id'] = Auth::id() ;
+        $planning->update($data);
 
         $nourriture = Nourriture::find($request->input('nourriture_id')) ;
         $nourriture->cout = $nourriture->cout($format = false) ;
