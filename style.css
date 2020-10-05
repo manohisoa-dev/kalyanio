@@ -1,0 +1,65 @@
+body{margin: 0; 
+    padding: 0
+}
+
+.header{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 3, 0.009), white), url('../images/asparagus.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-brand{
+    margin-left: 20%;
+    color: black;
+    font-weight: 800;
+    font-size: 2em;
+}
+.navbar-nav{
+    margin-left: 20%;
+    color: black;
+}
+span.navbar-toggler-icon{
+    position: relative;
+    z-index: 1;
+    color: black;
+    margin: 0;
+}
+.nav-item{
+    margin-left: 20px;
+}
+.nav-item:nth-child(3){
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    background-color:#d3212d;
+}
+.titre{
+    margin-top: 50px;
+}
+.titre p{
+    margin-top: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    font-family: serif;
+}
+.titre h3{
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+}
+.icons{
+    margin-top: 30px;
+    float: right;
+}
+.icons ul li{
+    list-style: none;
+}
+
+.row{
+    width: 100%;
+}
