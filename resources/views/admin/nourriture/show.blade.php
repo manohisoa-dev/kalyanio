@@ -124,10 +124,13 @@
                 </a> |
                 <a href="{{route('admin.nourriture-ingredient.index')}}?nourriture_id={{$nourriture->id}}" title="Ajouter des ingrédients">
                     <i class="fa fa-gears" alt="Ajouter des ingrédients"></i> Ajouter des ingrédients
-                </a>&nbsp;&nbsp; |
-                <a href="{{route('admin.ingredient-fournisseur.create')}}?ingredient_id={{$nourriture->ingredients()->first()->id}}" title="Mentionner le founisseur de ses ingrédients">
-                    <i class="fa fa-industry" alt="Mentionner le founisseur de cet ingrédient"></i> Mentionner le founisseur de cet ingrédient
-                </a>&nbsp;
+                </a>&nbsp;&nbsp;
+                @if($nourriture->ingredients()->count() > 0)
+                    |
+                    <a href="{{route('admin.ingredient-fournisseur.create')}}?ingredient_id={{$nourriture->ingredients()->first()->id}}" title="Mentionner le founisseur de ses ingrédients">
+                        <i class="fa fa-industry" alt="Mentionner le founisseur de cet ingrédient"></i> Mentionner le founisseur de cet ingrédient
+                    </a>&nbsp;
+                @endif
             </div>
         </div>
     </div>
