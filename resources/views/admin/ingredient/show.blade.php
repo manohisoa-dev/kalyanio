@@ -20,7 +20,10 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>Détail Ingredient : {{$ingredient->libelle}}</h5>
+                <h5>Détail Ingredient : {{$ingredient->libelle}}</h5>  &nbsp;
+                <a href="{{route('admin.ingredient-fournisseur.create')}}?ingredient_id={{$ingredient->id}}" title="Mentionner le founisseur de cet ingrédient" class="pull-right">
+                    <i class="fa fa-industry" alt="Mentionner le founisseur de cet ingrédient"></i> Mentionner le founisseur de cet ingrédient
+                </a>&nbsp;
             </div>
             <div class="ibox-content">
                 <ul class="list-group">

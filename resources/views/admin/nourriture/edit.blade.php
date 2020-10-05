@@ -23,7 +23,7 @@
                 <h5>Mise à jour Nourriture : {{$nourriture->libelle}}</h5>
             </div>
             <div class="ibox-content">
-                <form action="{{ route('admin.nourriture.index')}}/{{$nourriture->id}}" method="post">
+                <form action="{{ route('admin.nourriture.index')}}/{{$nourriture->id}}" method="post" enctype="multipart/form-data">
 
                     {{ csrf_field() }}
 
@@ -85,7 +85,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 text-center">
-                                        <img id="apercu" src="http://via.placeholder.com/200" class="img-thumbnail mt-2"  width="200" height="200"/>
+                                        <img id="apercu" src="http://via.placeholder.com/374x200" class="img-thumbnail mt-2"  width="200" height="200"/>
                                     </div>
                                 </div>
 

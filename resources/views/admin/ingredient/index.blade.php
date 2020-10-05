@@ -83,7 +83,23 @@
                                     <td>
                                         {{ $record->updated_at->diffForHumans() }}
                                     </td>
-                                    @include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => route('admin.ingredient.index'), 'record' => $record ] )
+                                    <td class="actions-cell text-center" width="7%">
+                                        <form class="form-inline" action="{{route('admin.ingredient.index')}}/{{$record->id}}" method="POST">
+                                            <a href="{{route('admin.ingredient-fournisseur.create')}}?ingredient_id={{$record->id}}" alt="Mentionner le founisseur de cet ingrédient">
+                                                <i class="fa fa-industry" alt="Mentionner le founisseur de cet ingrédient"></i>
+                                            </a>&nbsp;&nbsp;
+
+                                            <a href="{{route('admin.ingredient.index')}}/{{$record->id}}" alt="Détail"><i class="fa fa-eye" alt="Détail"></i></a>&nbsp;&nbsp;
+
+                                            <a href="{{route('admin.ingredient.index')}}/{{$record->id}}/edit" alt="Modifier"><i class="fa fa-pencil-square-o" alt="Modifier"></i></a>
+
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                            <button style="outline: none;background: transparent;border: none;"
+                                                    onclick="return confirm('Vous êtes sur?')"
+                                                    type="submit" class="fa fa-trash text-danger" alt="Supprimer"></button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @empty
                                 @include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 6])

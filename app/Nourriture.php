@@ -16,8 +16,8 @@ class Nourriture extends Model {
     protected static $aImageSize = array(
         'mini'              => [25, 25],
         'thumb'             => [50, 50],
-        'medium'            => [100, 100],
-        'large'             => [800, 500]
+        'medium'            => [374, 200],
+        'large'             => [598, 418]
     );
 
     protected $table = "nourritures";
@@ -57,7 +57,7 @@ class Nourriture extends Model {
         }
 
         // paginate results
-        return $query->paginate(Config::get('constants.perpage.admin'));
+        return $query->paginate(8);
     }
 
     public static function validationRules( $attributes = null )
