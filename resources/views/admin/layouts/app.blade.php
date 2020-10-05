@@ -13,6 +13,7 @@
 
     <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/responsive.css') }}" rel="stylesheet">
 
     <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet"/>
     <link href="{{ asset('admin/css/plugins/steps/jquery.steps.css')}}" rel="stylesheet"/>

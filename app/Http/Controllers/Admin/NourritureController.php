@@ -17,6 +17,7 @@ class NourritureController extends Controller
 
     public function index()
     {
+//        Nourriture::regenerateAllAvatar() ;
         $records = Nourriture::findRequested();
         return $this->view( "index", ['records' => $records] );
     }
@@ -96,7 +97,15 @@ class NourritureController extends Controller
 
         $this->validate($request, Nourriture::validationRules());
 
-        $nourriture->update($request->all());
+        $nourriture->update($request->except('image'));
+
+        #ajout photo pour l'evenement
+        if ($request->file('image')) {
+            $media = MediaUploader::fromSource($request->file('image'))->toDestination('uploads', '/nourriture')->useHashForFilename()->upload();
+            $nourriture->attachMedia($media, 'image');
+
+            Nourriture::regenerateMyAvatar($media) ;
+        }
 
         # notification
         Notify::success('Nourriture a été mise à jour avec succès');

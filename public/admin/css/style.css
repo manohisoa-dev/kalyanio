@@ -5513,11 +5513,12 @@ del {
   box-shadow: 0 3px 7px 0 #a8a8a8;
 }
 .product-imitation {
-  text-align: center;
-  padding: 90px 0;
-  background-color: #f8f8f9;
-  color: #bebec3;
-  font-weight: 600;
+    text-align: center;
+    /*padding: 90px 0;*/
+    padding: 0;
+    background-color: #f8f8f9;
+    color: #bebec3;
+    font-weight: 600;
 }
 .cart-product-imitation {
   text-align: center;

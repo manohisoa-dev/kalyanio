@@ -56,8 +56,8 @@
 
                                 @if ($errors->has('sous_category_id'))
                                     <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('sous_category_id') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('sous_category_id') }}</strong>
+                                    </span>
                                 @endif
                             </div>
 
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 text-center">
-                                        <img id="apercu" src="http://via.placeholder.com/200" class="img-thumbnail mt-2"  width="200" height="200"/>
+                                        <img id="apercu" src="http://via.placeholder.com/374x200" class="img-thumbnail mt-2"  width="200" height="200"/>
                                     </div>
                                 </div>
 
