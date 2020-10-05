@@ -15,7 +15,6 @@
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/responsive.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet"/>
     <link href="{{ asset('admin/css/plugins/steps/jquery.steps.css')}}" rel="stylesheet"/>
 
     {{--Toatsr--}}
@@ -24,18 +23,6 @@
     <link rel="stylesheet" href="{{ asset('bower_resources/jquery-confirm-master/dist/jquery-confirm.min.css') }}">
 
     <link href="{{ asset('admin/css/plugins/datapicker/datepicker3.css') }}" rel="stylesheet"/>
-
-    <!-- Data Tables -->
-
-    <link href="{{ asset('admin/css/plugins/dataTables/dataTables.bootstrap.css')}}" rel="stylesheet">
-    <link href="{{ asset('admin/css/plugins/dataTables/dataTables.tableTools.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('admin/css/plugins/dataTables/dataTables.responsive.css')}}" rel="stylesheet">
-
-    <!-- Easy Ui-->
-    <link href="{{ asset('easyui/themes/default/easyui.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('easyui/themes/icon.css') }}" type="text/css" rel="stylesheet">
-
-    <link href="{{ asset('admin/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 
     <link href="{{ asset('admin/css/plugins/chosen/bootstrap-chosen.css') }}" rel="stylesheet">
 
@@ -291,21 +278,7 @@
 <script src="{{ asset('admin/js/plugins/staps/jquery.steps.min.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
 
-
-{{-- Easy Ui--}}
-<script src="{{ asset('easyui/easyloader.js') }}"></script>
-<script src="{{ asset('easyui/locale/easyui-lang-fr.js') }}"></script>
-<script src="{{ asset('easyui/jquery.easyui.min.js') }}"></script>
-
-<!-- Data Tables -->
-<script src="{{ asset('admin/js/plugins/dataTables/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/dataTables/dataTables.bootstrap.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/dataTables/dataTables.responsive.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/dataTables/dataTables.tableTools.min.js') }}"></script>
-
 <script src="{{ asset('admin/js/script.js') }}"></script>
-
-<script src="{{ asset('admin/js/jquery.dataTables.min.js') }}"></script>
 
 <script src="{{ asset('admin/js/plugins/chosen/chosen.jquery.js') }}"></script>
 
