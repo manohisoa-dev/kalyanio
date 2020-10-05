@@ -1,5 +1,5 @@
 <?php
- $conn = mysqli_connect("localhost", "root", "", "kalyanio");
+ $conn = mysqli_connect("localhost", "root", "", "kalintsika");
 
 $sql = "SELECT * FROM nourritures ORDER BY cout DESC";
 $result = mysqli_query($conn, $sql);
