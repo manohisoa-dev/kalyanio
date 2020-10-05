@@ -32,8 +32,8 @@
                 <thead>
                     <tr class="header-row">
                         {!!\Nvd\Crud\Html::sortableTh('id','admin.ingredient-fournisseur.index','Id')!!}
-                        {!!\Nvd\Crud\Html::sortableTh('ingredient_id','admin.ingredient-fournisseur.index','Ingredient Id')!!}
-                        {!!\Nvd\Crud\Html::sortableTh('fournisseur_id','admin.ingredient-fournisseur.index','Fournisseur Id')!!}
+                        {!!\Nvd\Crud\Html::sortableTh('ingredient_id','admin.ingredient-fournisseur.index','Ingredient')!!}
+                        {!!\Nvd\Crud\Html::sortableTh('fournisseur_id','admin.ingredient-fournisseur.index','Fournisseur')!!}
                         <th></th>
                     </tr>
                     <tr class="search-row">
@@ -59,7 +59,7 @@
                                           data-value="{{ $record->ingredient_id }}"
                                           data-pk="{{ $record->{$record->getKeyName()} }}"
                                           data-url="{{ route('admin.ingredient-fournisseur.index')}}/{{ $record->{$record->getKeyName()} }}"
-                                          >{{ $record->ingredient_id }}</span>
+                                          >{{ $record->ingredient->libelle }}</span>
                                 </td>
                                 <td>
                                     <span class="editable"
@@ -68,7 +68,7 @@
                                           data-value="{{ $record->fournisseur_id }}"
                                           data-pk="{{ $record->{$record->getKeyName()} }}"
                                           data-url="{{ route('admin.ingredient-fournisseur.index')}}/{{ $record->{$record->getKeyName()} }}"
-                                          >{{ $record->fournisseur_id }}</span>
+                                          >{{ $record->fournisseur->nom }}</span>
                                     </td>
                                 @include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => route('admin.ingredient-fournisseur.index'), 'record' => $record ] )
                             </tr>

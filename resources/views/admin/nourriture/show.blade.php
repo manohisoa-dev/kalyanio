@@ -128,7 +128,7 @@
                 @if($nourriture->ingredients()->count() > 0)
                     |
                     <a href="{{route('admin.ingredient-fournisseur.create')}}?ingredient_id={{$nourriture->ingredients()->first()->id}}" title="Mentionner le founisseur de ses ingrédients">
-                        <i class="fa fa-industry" alt="Mentionner le founisseur de cet ingrédient"></i> Mentionner le founisseur de cet ingrédient
+                        <i class="fa fa-industry" alt="Mentionner le founisseur de cet ingrédient"></i> Mentionner le founisseur de ses ingrédients
                     </a>&nbsp;
                 @endif
             </div>

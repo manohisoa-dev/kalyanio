@@ -32,12 +32,12 @@
                         <h5>{{$ingredientFournisseur->id}}</h5>
                     </li>
                                         <li class="list-group-item">
-                        <h4>Ingredient Id</h4>
-                        <h5>{{$ingredientFournisseur->ingredient_id}}</h5>
+                        <h4>Ingredient</h4>
+                        <h5>{{$ingredientFournisseur->ingredient->libelle}}</h5>
                     </li>
                                         <li class="list-group-item">
-                        <h4>Fournisseur Id</h4>
-                        <h5>{{$ingredientFournisseur->fournisseur_id}}</h5>
+                        <h4>Fournisseurgit</h4>
+                        <h5>{{$ingredientFournisseur->fournisseur->nom}}</h5>
                     </li>
                                     </ul>
             </div>

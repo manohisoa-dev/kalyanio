@@ -49,5 +49,15 @@ class IngredientFournisseur extends Model {
         return $newRules;
     }
 
+    public function ingredient()
+    {
+        return $this->belongsTo('App\Ingredient');
+    }
+
+    public function fournisseur()
+    {
+        return $this->belongsTo('App\Fournisseur');
+    }
+
 }
 
