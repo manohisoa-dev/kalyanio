@@ -17,12 +17,13 @@
     <a href="{{route('admin.nourriture.index')}}" title="Nourritures"><i class="fa fa-cutlery"></i> <span class="nav-label">Nourritures</span> </a>
 </li>
 
-<li class="{{Request::is('admin/nourriture-ingredient') || Request::is('admin/nourriture-ingredient/*')  ? 'active' : ''}}">
-    <a href="{{route('admin.nourriture-ingredient.index')}}" title="Ingredients pour chq nouritures"><i class="fa fa-gears"></i> <span class="nav-label">Ingredients pour chq nouritures</span> </a>
-</li>
 
 <li class="{{Request::is('admin/ingredient') || Request::is('admin/ingredient/*')  ? 'active' : ''}}">
     <a href="{{route('admin.ingredient.index')}}" title="Ingredients"><i class="fa fa-leaf"></i> <span class="nav-label">Ingredients</span> </a>
+</li>
+
+<li class="{{Request::is('admin/fournisseur') || Request::is('admin/fournisseur/*')  ? 'active' : ''}}">
+    <a href="{{route('admin.fournisseur.index')}}" title="Fournisseurs des ingrédients"><i class="fa fa-industry"></i> <span class="nav-label">Fournisseurs</span> </a>
 </li>
 
 <li class="{{Request::is('admin/planning') || Request::is('admin/planning/*')  ? 'active' : ''}}">

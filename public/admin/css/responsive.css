@@ -1,0 +1,16 @@
+.table-responsive{
+    overflow-y: hidden;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1720px){
+    .product-imitation > img{  max-width: 100% !important;}
+    .img-fluid{  max-width: 100% !important;}
+    .product-box {min-height: 310px;}
+}
+
+@media (max-width: 1200px){
+    .product-imitation > img{  max-width: 100% !important;}
+    .img-fluid{  max-width: 100% !important;}
+    .product-box {min-height: 310px;}
+}
