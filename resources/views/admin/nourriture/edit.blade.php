@@ -35,7 +35,7 @@
 
                             <div class="form-group col-lg-12 pl-0">
                                 <label for="category_id">Catégorie</label>
-                                <select class="form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }} chosen-select" id="category_id" name="category_id" required>
+                                <select class="form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" id="category_id" name="category_id" required onchange="getSubCategories();">
                                     @foreach(\App\Category::all() as $item)
                                         <option value="{{$item->id}}" {{$nourriture->category_id == $item->id ? 'selected' : '' }}>{{$item->libelle}}</option>
                                     @endforeach
@@ -50,7 +50,7 @@
 
                             <div class="form-group col-lg-12 pl-0">
                                 <label for="category_id">Sous catégorie</label>
-                                <select class="form-control{{ $errors->has('sous_category_id') ? ' is-invalid' : '' }} chosen-select" id="sous_category_id" name="sous_category_id" required>
+                                <select class="form-control{{ $errors->has('sous_category_id') ? ' is-invalid' : '' }}" id="sous_category_id" name="sous_category_id" required>
                                     @foreach(\App\SousCategory::all() as $item)
                                         <option value="{{$item->id}}" {{$nourriture->sous_category_id == $item->id ? 'selected' : '' }}>{{$item->libelle}}</option>
                                     @endforeach
@@ -127,6 +127,35 @@
         $("#image").change(function() {
             readURL(this);
         });
+
+        function getSubCategories(){
+            var category_id = $("#category_id").val() ;
+
+            if(category_id != 0){
+                $.ajax({
+                    type: "POST",
+                    url: "{{route('admin.get-subcategory')}}",
+                    data: {category_id : category_id},
+                    dataType: 'json',
+                    success: function (data) {
+                        // console.log(data) ;
+
+                        var $select = $('#sous_category_id');
+                        $select.find('option').remove();
+                        $.each(data, function(key, value) {
+                            $('<option>').val(value.id).text(value.libelle).appendTo($select);
+                        });
+                        // $('#sous_category_id').chosen('destroy');
+                        // $('#sous_category_id').prop("selectedIndex", -1);
+                        // $('#sous_category_id').chosen();
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            }
+
+        }
 
     </script>
 @endsection

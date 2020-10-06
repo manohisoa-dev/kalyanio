@@ -10,4 +10,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
     Route::resource('statistique','StatistiqueController');
     Route::resource('fournisseur','FournisseurController');
     Route::resource('ingredient-fournisseur','IngredientFournisseurController');
+
+    Route::post('sub-category', function () {
+        $category_id = request('category_id') ;
+        $subCategories = \App\SousCategory::where('category_id' , $category_id)->get() ;
+        return $subCategories->toJson() ;
+    })->name('get-subcategory');
 });
