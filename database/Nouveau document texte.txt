@@ -1,0 +1,1 @@
+ALTER TABLE `plannings` ADD `user_id` INT NULL AFTER `nourriture_id`;
