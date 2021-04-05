@@ -35,6 +35,8 @@
 <script src="{{ asset('bower_resources/jquery-validation/dist/jquery.validate.js') }}"></script>
 <script src="{{ asset('admin/js/script.js') }}"></script>
 
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aa54ddafa945fd26411584886/f5e119d4684b6ee8e91b1f35e.js");</script>
+
 </body>
 
 </html>

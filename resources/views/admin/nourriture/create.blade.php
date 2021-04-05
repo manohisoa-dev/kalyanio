@@ -63,10 +63,10 @@
 
                             {!! \Nvd\Crud\Form::input( 'nb_personne' )->show() !!}
 
-                           {!! \Nvd\Crud\Form::textarea( 'description' )->show() !!}
+                            {!! \Nvd\Crud\Form::textarea( 'description' )->show() !!}
 
                             {!! \Nvd\Crud\Form::textarea( 'preparation' )->show() !!}
-                        </div> 
+                        </div>
 
                         <div class="col-lg-4">
                             {!! \Nvd\Crud\Form::input( 'preparation_duree' )->show() !!}

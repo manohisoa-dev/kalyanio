@@ -17,7 +17,7 @@ class NourritureController extends Controller
 
     public function index()
     {
-//        Nourriture::regenerateAllAvatar() ;
+        Nourriture::regenerateAllAvatar() ;
         $records = Nourriture::findRequested();
         return $this->view( "index", ['records' => $records] );
     }

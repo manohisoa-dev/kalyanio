@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# Kaly Anio
+# Dago share
 
-encyclopédie cullunaire
+Dago Share est un site qui permet de partager des fichiers, documents, tutoriels entre des particuliers pour les particuliers
 
 ## Commencer
 
@@ -52,7 +51,7 @@ Ensuite, copiez le lien qui se trouve dans la ligne de commande et coller les da
 
 * **Mano Rakotondrasata** - [manohisoa-dev](https://github.com/manohisoa-dev/)
 
-Voir aussi la liste des [contributeurs](https://github.com/manohisoa-dev/kalyanio/graphs/contributors) qui a participé à ce projet.
+Voir aussi la liste des [contributeurs](https://github.com/manohisoa-dev/dagoshare/graphs/contributors) qui a participé à ce projet.
 
 ## Licence
 
@@ -63,7 +62,3 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE.md] (LICENSE.md) pour 
 * Je remercie profondément les personnes qui ont contribuées à la réalisation de ce projet
 * Merci aux team Agnaro Webcompany aussi ;)
 
-=======
-# kalyanio
-encyclopédie cullunaire 
->>>>>>> refs/remotes/origin/master

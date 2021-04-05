@@ -38,7 +38,7 @@ class IngredientController extends Controller
     {
         $this->validate($request, Ingredient::validationRules());
 
-        Ingredient::create($request->all());
+        Ingredient::create($request->except('image'));
 
         # notification
         Notify::success('Ingredient a été créer avec succès');
